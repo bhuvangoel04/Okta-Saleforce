@@ -1,0 +1,19 @@
+{
+  "name": "okta-node-sample",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@okta/oidc-middleware": "^4.4.0",
+    "dotenv": "^17.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-openid-connect": "^2.18.1",
+    "express-session": "^1.18.1",
+    "passport": "^0.6.0",
+    "passport-auth0": "^1.4.4",
+    "passport-openidconnect": "^0.1.2"
+  }
+}

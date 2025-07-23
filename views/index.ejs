@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Federated Login Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Federated Login Example</h1>
+
+    <% if (user) { %>
+      <p><strong>Welcome, <%= user.name || user.preferred_username || user.email %>!</strong></p>
+      <p>You are logged in .</p>
+
+      <h3>User Details</h3>
+      <pre><%= JSON.stringify(user, null, 2) %></pre>
+
+      
+
+    <% } else { %>
+      <p><strong>You are not logged in.</strong></p>
+      <div>
+        <a href="/login" class="secondary">Login with Okta</a>
+        <a href="/auth0/login" class="secondary">Login with Auth0</a>
+      </div>
+    <% } %>
+  </main>
+</body>
+</html>
